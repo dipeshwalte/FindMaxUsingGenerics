@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
-commitMessage="[Dipesh] modify addedMaximumIntLogic"
-currentBranchName="UC1FindMaximumInt"
-newBranchName="UC2FindMaximumFloat"
+commitMessage="[Dipesh] modify addedMaximumFloatLogic"
+currentBranchName="UC2FindMaximumFloat"
+newBranchName="UC3FindMaximumString"
 echo --------git status---------
 echo
 git status

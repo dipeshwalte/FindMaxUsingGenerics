@@ -32,5 +32,27 @@ namespace FindMaximumTest
             Assert.AreEqual(num3, findMaximum.FindMaximumNumber(num1, num2, num3));
         }
 
+
+        [Test]
+        [TestCase(99.23f, 43.45f, 13.45f)]
+        public void GivenFirstNumFloatMaximum_ReturnMaximum(float num1, float num2, float num3)
+        {
+            Assert.AreEqual(num1, findMaximum.FindMaximumNumber(num1, num2, num3));
+        }
+
+        [Test]
+        [TestCase(55.56f, 99.56f, 34.43f)]
+        public void GivenSecondNumFloatMaximum_ReturnMaximum(float num1, float num2, float num3)
+        {
+            Assert.AreEqual(num2, findMaximum.FindMaximumNumber(num1, num2, num3));
+        }
+
+        [Test]
+        [TestCase(12.57f, 43.45f, 99.3f)]
+        public void GivenThirdNumFloatMaximum_ReturnMaximum(float num1, float num2, float num3)
+        {
+            Assert.AreEqual(num3, findMaximum.FindMaximumNumber(num1, num2, num3));
+        }
+
     }
 }
