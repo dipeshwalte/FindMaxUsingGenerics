@@ -54,5 +54,28 @@ namespace FindMaximumTest
             Assert.AreEqual(num3, findMaximum.FindMaximumNumber(num1, num2, num3));
         }
 
+        [Test]
+        [TestCase("Xerox","Thanos" , "Avengers")]
+        public void GivenFirstStringMaximum_ReturnMaximum(string str1, string str2, string str3)
+        {
+            Assert.AreEqual(str1, findMaximum.FindMaximumNumber(str1, str2, str3));
+        }
+
+        [Test]
+        [TestCase("Thanos", "Xerox", "Avengers")]
+        public void GivenSecondStringMaximum_ReturnMaximum(string str1, string str2, string str3)
+        {
+            Assert.AreEqual(str2, findMaximum.FindMaximumNumber(str1, str2, str3));
+        }
+
+        [Test]
+        [TestCase("Thanos", "Avengers", "Xerox")]
+        public void GivenThirdStringMaximum_ReturnMaximum(string str1, string str2, string str3)
+        {
+            Assert.AreEqual(str3, findMaximum.FindMaximumNumber(str1, str2, str3));
+        }
+
+
+
     }
 }
