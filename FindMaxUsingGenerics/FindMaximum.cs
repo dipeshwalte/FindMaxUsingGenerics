@@ -7,12 +7,18 @@ namespace FindMaxUsingGenerics
     public class FindMaximum<T> where T:IComparable
     {
         public T value1, value2, value3;
+        public T[] values;
         public FindMaximum(T value1, T value2, T value3)
         {
             this.value1 = value1;
             this.value2 = value2;
             this.value3 = value3;
         }
+        public FindMaximum(T[] values)
+        {
+            this.values = values;
+        }
+
         public FindMaximum()
         { 
         }
@@ -34,6 +40,11 @@ namespace FindMaxUsingGenerics
             throw new FindMaximumException("All Values are Same");
         }
 
+        public T FindMaximumFromArray()
+        {
+            Array.Sort(values);
+            return values[values.Length-1];
+        }
         public T MaxMethod()
         {
             return FindMaximumNumber(this.value1, this.value2, this.value3);
