@@ -6,6 +6,16 @@ namespace FindMaxUsingGenerics
 {
     public class FindMaximum<T> where T:IComparable
     {
+        public T value1, value2, value3;
+        public FindMaximum(T value1, T value2, T value3)
+        {
+            this.value1 = value1;
+            this.value2 = value2;
+            this.value3 = value3;
+        }
+        public FindMaximum()
+        { 
+        }
         public T FindMaximumNumber(T num1, T num2, T num3)
         {
             
@@ -24,6 +34,9 @@ namespace FindMaxUsingGenerics
             throw new FindMaximumException("All Values are Same");
         }
 
-
+        public T MaxMethod()
+        {
+            return FindMaximumNumber(this.value1, this.value2, this.value3);
+        }
     }
 }

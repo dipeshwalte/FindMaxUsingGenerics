@@ -7,12 +7,14 @@ namespace FindMaximumTest
         FindMaximum<int> findMaximumInt;
         FindMaximum<float> findMaximumFloat;
         FindMaximum<string> findMaximumString;
+        FindMaximum<int> findMaximumGenericClass;
         [SetUp]
         public void Setup()
         {
             findMaximumInt = new FindMaximum<int>();
             findMaximumFloat= new FindMaximum<float>();
             findMaximumString = new FindMaximum<string>();
+            findMaximumGenericClass = new FindMaximum<int>(23, 45, 54);
         }
 
         [Test]
@@ -79,5 +81,11 @@ namespace FindMaximumTest
             Assert.AreEqual(str3, findMaximumString.FindMaximumNumber(str1, str2, str3));
         }
 
+        [Test]
+        
+        public void GivenGenericClass_ReturnMaximum()
+        {
+            Assert.AreEqual(54,findMaximumGenericClass.MaxMethod());
+        }
     }
 }

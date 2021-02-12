@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
-commitMessage="[Dipesh] modify addedGenericLogic"
-currentBranchName="UC3Refactor1"
-newBranchName="UC3Refactor2"
+commitMessage="[Dipesh] modify addedGenericClassLogic"
+currentBranchName="UC3Refactor2"
+newBranchName="UC4MoreThan3Params"
 echo --------git status---------
 echo
 git status
